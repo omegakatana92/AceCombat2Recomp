@@ -20,3 +20,6 @@ input/
 build-recompiler/
 generated/
 psx-runtime_generated_sources.txt
+
+# Launcher
+launcher/launcher-config.json

@@ -108,6 +108,34 @@ No original game disc images or copyrighted game assets are distributed with thi
 
 Fullscreen support is available through the runtime configuration.
 
+## Launcher
+
+A lightweight Windows GUI launcher is provided in the `launcher/` folder.
+
+The launcher:
+
+* Locates the recompiled executable automatically (it lives next to `launcher/launcher/..`).
+* Asks you to pick your legally obtained game disc CUE.
+* Lets you choose between the bundled **OpenBIOS** (default) and a **Custom BIOS** of your own.
+* Passes `--disc "<path>"` to the recompiled executable, plus `--bios "<path>"` only when Custom BIOS is selected (the runtime's actual supported mechanism).
+* Persists the last selected CUE, BIOS mode, and Custom BIOS path in `%APPDATA%\AceCombat2Recomp\launcher-config.json` so the next launch pre-fills them.
+* Validates the CUE and (for Custom BIOS) the BIOS file exist before launching.
+* Invokes the existing `Ace_Combat_2_Recompiled.exe` with the runtime flags it actually supports.
+* No external dependencies — uses Windows PowerShell 5.1 (built into Windows) and System.Windows.Forms.
+* No copyrighted game disc image or retail PlayStation BIOS is bundled or copied.
+
+To use:
+
+1. Open the `launcher/` folder.
+2. Double-click `AceCombat2Launcher.bat` (or run `powershell -ExecutionPolicy Bypass -File .\launcher\AceCombat2Launcher.ps1`).
+3. Pick your **BIOS** source:
+   * **OpenBIOS (Included)** — uses the bundled `bios\openbios.bin` shipped with the release. No BIOS download is required.
+   * **Custom BIOS** — click **Browse...** and select your own legally obtained PS1 BIOS file (e.g. `SCPH1001.BIN`). Retail BIOS files are not included or distributed.
+4. Click **Browse...** in the Disc CUE section and select your legally obtained `Ace Combat 2 (USA).cue` disc image.
+5. Click **Launch Game**.
+
+OpenBIOS will boot, the game will detect the disc, and gameplay will start. Press **Alt+Enter** in-game to toggle fullscreen.
+
 ## Disclaimer
 
 This project is currently a **work in progress** and is not considered a finished or fully playable release.
