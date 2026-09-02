@@ -1,0 +1,31 @@
+[game]
+name = "AceCombat2"
+id = "SLUS-00404"
+exe = "input/SLUS_004.04"
+disc = "disc/Ace Combat 2 (USA).cue"
+load_address = "0x801C8000"
+entry_pc = "0x801CB614"
+text_size = "0x00017000"
+stack_base = "0x801FFFF0"
+
+[recompiler]
+seeds = "seeds/functions.txt"
+strict = true
+out_dir = "generated"
+
+[runtime]
+window_title = "Ace Combat 2 Recompiled"
+bios_hle = false
+openbios = true
+overlay_cache = true
+
+[video]
+renderer = "software"
+
+[prepare_disc]
+track_01_sha1 = "a441bb9ace9434a6d05d9e846d2b23b9523e2867"
+track_01_md5 = "17803a9608ac2839ef89812f3714bfe0"
+track_01_size = 580760544
+
+[netplay]
+require_cue = true
