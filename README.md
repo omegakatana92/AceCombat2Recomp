@@ -1,8 +1,12 @@
-﻿# Ace Combat 2 - Recomp
+# Ace Combat 2 - Recomp
 
 > **Work in Progress:** This recompilation project is currently under development. Features, compatibility, performance, and functionality may change as development continues.
 
 A modern fan-made recompilation project for **Ace Combat 2**, originally released for the **Sony PlayStation**.
+
+## Built With PSXRecomp
+
+This project is built using [PSXRecomp](https://github.com/mstan/psxrecomp), the PlayStation 1 static recompiler framework created by mstan. The framework is included in this project as a Git submodule.
 
 ## Disc Required
 
